@@ -37,8 +37,8 @@ tensorboard_html_binary(
 # TODO(jwexler): Figure out a cleaner way to get vulcanized visualizations that
 # work in Jupyter notebooks.
 genrule(
-    name = "facets_jupyter",
+    name = "facets-dist",
     srcs = [":facets"],
-    outs = ["facets-jupyter.html"],
+    outs = ["facets-dist.html"],
     cmd = "sed 's|<!doctype html>|<!doctype html><script>define=undefined</script>|' $(location :facets) > $@"
 )

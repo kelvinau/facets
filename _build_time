@@ -1,0 +1,7 @@
+- bazel build facets:facets-dist
+- file will be created in bazel-genfiles/facets/
+
+First time: 731.775s ~= 12mins (cache generated)
+Second time: 29s
+Third time (renamed output file): 233s ~= 4mins (cache generated)
+Forth time (changed color): 14s
